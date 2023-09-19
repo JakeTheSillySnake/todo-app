@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates";
+}
+
+body {
+  background: #bfdbe7;
+}
+
+.paper {
+  width: 100%;
+  text-align: center;
+  height: 445px;
+  padding: 12px 20px;
+  background: repeating-linear-gradient(#F1EDE9, #F1EDE9 31px, #94ACD4 31px, #94ACD4 32px);
+  font-family: "Shadows Into Light", cursive;
+  line-height: 32px;
+  outline: 0;
+}
+
+#list {
+  margin-top: 33px;
+  max-height: 220px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: left;
+  font-size: 22px;
+  transition-duration: 200ms;
+}
+
+#upper-bar {
+  position: absolute;
+  width: 75%;
+  left: 25%;
+  top: 3%;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#items {
+  position: absolute;
+  top: -17%;
+  left: -27%;
+  color: gray;
+}
+
+#clear {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: gray;
+}
+
+#clear:hover {
+  color: #e69598;
+  transition-duration: 100ms;
+}
+
+button:hover {
+  opacity: 90%;
+  transition-duratiuon: 100ms;
+}
+
+#sort-buttons {
+  display: flex;
+  width: 48%;
+  justify-content: space-between;
+}
+
+button {
+  background: none;
+  border: 1px solid gray;
+  color: gray;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.active {
+  color: white;
+  border-color: white;
+}
+
+span {
+  transition-duration: 500ms;
+}
+
+.notepad {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 10px 10px;
+}
+
+.top {
+  width: 100%;
+  height: 50px;
+  background: #333;
+  border-radius: 5px 5px 0 0;
+}
+
+textarea {
+  position: fixed;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 6px;
+  resize: none;
+  padding: 10px;
+  font-size: 18px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+#list::-webkit-scrollbar, textarea::-webkit-scrollbar {
+  width: 15px;
+  background-color: #f5f5f5;
+}
+
+#list::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #bcbcbc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+input[type=radio] {
+  appearance: none;
+}
+
+input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: transparent;
+  position: relative;
+  top: 3px;
+}
+
+input[type=checkbox]:hover, button, #clear:hover {
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #a0d084;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
